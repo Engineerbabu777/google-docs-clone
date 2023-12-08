@@ -1,8 +1,13 @@
+import { auth } from '@/firebase';
 import { Button } from '@material-tailwind/react'
+import { useSignOut } from 'react-firebase-hooks/auth';
 import { FiMenu, FiSearch } from 'react-icons/fi'
 import { GrApps } from 'react-icons/gr'
 import { IoDocumentText } from 'react-icons/io5'
 export default function Header ({ user }) {
+
+  const [signOut, loading, error] = useSignOut(auth);
+
   return (
     <>
       <div className='flex items-center sticky top-0 z-50 px-4 py-2 shadow-md'>
@@ -34,7 +39,7 @@ export default function Header ({ user }) {
           className='cursor-pointer w-12 h-12 rounded-full ml-2 hidden md:inline-flex'
           src={user?.photoURL}
           alt='none'
-          onClick={() => {}}
+          onClick={async() => {await signOut()}}
           loading='lazy'
         />
       </div>

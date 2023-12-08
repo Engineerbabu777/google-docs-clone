@@ -1,7 +1,7 @@
 import { HiOutlineDotsVertical } from 'react-icons/hi'
 import Image from 'next/image'
 
-export default function NewDocs ({}) {
+export default function NewDocs ({ openModal }) {
   return (
     <>
       <section className='bg-[#F8F9FA] pb-10 px-10 '>
@@ -13,7 +13,7 @@ export default function NewDocs ({}) {
             </button>
           </div>
 
-          <div className=''>
+          <div className='' onClick={openModal}>
             <div className='relative h-52 w-40 border-2 cursor-pointer hover:border-blue-700'>
               <Image src='https://links.papareact.com/pju' layout='fill' />
             </div>
