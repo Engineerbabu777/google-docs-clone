@@ -31,7 +31,7 @@ export default function Header ({}) {
         </button>
 
         <img
-          className='cursor-pointer w-12 h-12 rounded-full ml-2'
+          className='cursor-pointer w-12 h-12 rounded-full ml-2 hidden md:inline-flex'
           src={
             'https://lh3.googleusercontent.com/ogw/ANLem4YSRDkd-y2kxb8CTLwMVc7JIHifcU8YTsdt7n-G=s32-c-mo'
           }
